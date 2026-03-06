@@ -22,15 +22,3 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-
-/* Hide Spline Watermark */
-.spline-watermark-hide canvas ~ * {
-  display: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-.spline-watermark-hide > div > div,
-.spline-watermark-hide a[href*="spline.design"] {
-  display: none !important;
-}

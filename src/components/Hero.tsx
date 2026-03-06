@@ -58,7 +58,7 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.9 }}
         transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0 w-full h-full z-0 pointer-events-auto spline-watermark-hide"
+        className="absolute inset-0 w-full h-full z-0 pointer-events-auto"
       >
         <Spline 
           scene="https://prod.spline.design/inaVMWKZJwM641B4/scene.splinecode" 
@@ -66,8 +66,11 @@ export default function Hero() {
         />
       </motion.div>
 
+      {/* Watermark Cover Layer */}
+      <div className="absolute bottom-4 right-4 w-40 h-12 bg-black z-10 pointer-events-none rounded-md" />
+
       {/* Gradient Overlay for Text Readability */}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black to-transparent z-0" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black to-transparent z-0 pointer-events-none" />
     </section>
   );
 }
